@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4q8rgo6xyxrc"]
+
+[ext_resource type="Texture2D" uid="uid://bo0nhs5rjrfmh" path="res://assets/image/sprite/first_char_sprite.png" id="1_jcxvp"]
+[ext_resource type="Script" path="res://scene/level.gd" id="1_pmxd5"]
+[ext_resource type="Script" path="res://scene/FistChar.gd" id="2_rd0hm"]
+[ext_resource type="PackedScene" uid="uid://dk0b8ispn8vqm" path="res://scene/player.tscn" id="4_1kvdb"]
+
+[node name="NodeOne" type="Node2D"]
+script = ExtResource("1_pmxd5")
+
+[node name="FistChar" type="Sprite2D" parent="."]
+position = Vector2(392, 228)
+scale = Vector2(2.73437, 2.73437)
+texture = ExtResource("1_jcxvp")
+script = ExtResource("2_rd0hm")
+
+[node name="Player" parent="." instance=ExtResource("4_1kvdb")]
+position = Vector2(141, 282)
